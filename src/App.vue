@@ -7,7 +7,7 @@
         <button @click="makeLove">Love</button>
         <Table></Table>
         <Form></Form>
-        <mainFooter></mainFooter>
+        <mainFooter name="Zunaid"></mainFooter>
     </div>
 </template>
 
