@@ -1,7 +1,9 @@
 <template>
+    <hr>
+    <div  class="container p-4 m-4">
     <h2 v-if="isDisplay">Show table</h2>
     <h2 v-else>Not Show table</h2>
-    <template  v-if="isDisplay">
+    <template  v-if="isDisplay" >
         <table class="table table-striped" :class="className">
             <thead>
                 <tr>
@@ -23,6 +25,7 @@
             </tbody>
         </table>
     </template>
+    </div>
 </template>
 
 <script>

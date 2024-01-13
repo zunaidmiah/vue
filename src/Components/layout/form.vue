@@ -55,8 +55,8 @@
                 <label class="form-check-label" for="inlineCheckbox3">3</label>
             </div>
 
-            <div class="form-group">
-                <button>Submit</button>
+            <div class="form-group my-4">
+                <button class="btn btn-primary">Submit</button>
             </div>
         </form>
     </div>
