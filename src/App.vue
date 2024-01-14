@@ -15,9 +15,9 @@
         <h2>Hello From Passing Content</h2>
         <h3>Hello From Another Passing Content</h3>
     </Card>
-    <Card
-      ><img src="https://picsum.photos/200/300" alt="" height="400" width="600"
-    /></Card>
+    <Card>
+        <img src="https://picsum.photos/200/300" alt="" height="400" width="600"/>
+    </Card>
   </div>
   <mainFooter :name="name"></mainFooter>
 </template>
