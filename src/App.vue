@@ -1,7 +1,7 @@
 <template>
   <mainHeader></mainHeader>
   <div class="container p-4 m-4">
-    <!-- <h1>{{ name }}</h1>
+    <h1>{{ name }}</h1>
         <h2>{{ Age }}</h2>
         <h3>{{ Girlfriend }}</h3>
         <button class="btn btn-secondary m-2" @click="makeLove">Love</button><br>
@@ -17,13 +17,13 @@
     </Card>
     <Card>
         <img src="https://picsum.photos/200/300" alt="" height="400" width="600"/>
-    </Card> -->
+    </Card>
     
 
 
 
     <!-- Card for Zunaid and Tithy -->
-    <!-- <Card>
+    <Card>
         <template v-slot:card-header>
             <img class="card-img-top" :src="zunaidImage" alt="Card image cap">
         </template>
@@ -56,19 +56,20 @@
                 <a :href="tithyLink" class="btn btn-primary">Go Facebook</a>
             </div>
         </template>
-    </Card> -->
+    </Card>
 
     <!-- End card for Zunaid and Tithy section -->
 
     <!-- multiple dynamic component secrtion -->
     <!-- tab A, tab B and tab C-->
-
-    <button class="btn btn-primary mr-1"  @click="activeTab = 'TabA'">Tab A</button>
-    <button class="btn btn-primary mr-1"  @click="activeTab = 'TabB'">Tab B</button>
-    <button class="btn btn-primary mr-1"  @click="activeTab = 'TabC'">Tab C</button>
-    <keep-alive>
-      <component :is="activeTab"/>
-  </keep-alive>
+    <teleport to='#another-app'>
+      <button class="btn btn-primary mr-1"  @click="activeTab = 'TabA'">Tab A</button>
+      <button class="btn btn-primary mr-1"  @click="activeTab = 'TabB'">Tab B</button>
+      <button class="btn btn-primary mr-1"  @click="activeTab = 'TabC'">Tab C</button>
+      <keep-alive>
+        <component :is="activeTab"/>
+      </keep-alive>
+    </teleport>
     <!-- <TabA v-if="activeTab === 'TabA'"/>
     <TabB v-if="activeTab === 'TabB'"/>
     <TabC v-if="activeTab === 'TabC'"/> -->
