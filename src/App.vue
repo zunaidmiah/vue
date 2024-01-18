@@ -1,7 +1,7 @@
 <template>
   <mainHeader></mainHeader>
   <div class="container p-4 m-4">
-    <h1>{{ name }}</h1>
+    <!-- <h1>{{ name }}</h1>
         <h2>{{ Age }}</h2>
         <h3>{{ Girlfriend }}</h3>
         <button class="btn btn-secondary m-2" @click="makeLove">Love</button><br>
@@ -17,13 +17,13 @@
     </Card>
     <Card>
         <img src="https://picsum.photos/200/300" alt="" height="400" width="600"/>
-    </Card>
+    </Card> -->
     
 
 
 
     <!-- Card for Zunaid and Tithy -->
-    <Card>
+    <!-- <Card>
         <template v-slot:card-header>
             <img class="card-img-top" :src="zunaidImage" alt="Card image cap">
         </template>
@@ -56,9 +56,25 @@
                 <a :href="tithyLink" class="btn btn-primary">Go Facebook</a>
             </div>
         </template>
-    </Card>
+    </Card> -->
 
     <!-- End card for Zunaid and Tithy section -->
+
+    <!-- multiple dynamic component secrtion -->
+    <!-- tab A, tab B and tab C-->
+
+    <button class="btn btn-primary mr-1"  @click="activeTab = 'TabA'">Tab A</button>
+    <button class="btn btn-primary mr-1"  @click="activeTab = 'TabB'">Tab B</button>
+    <button class="btn btn-primary mr-1"  @click="activeTab = 'TabC'">Tab C</button>
+    <keep-alive>
+      <component :is="activeTab"/>
+  </keep-alive>
+    <!-- <TabA v-if="activeTab === 'TabA'"/>
+    <TabB v-if="activeTab === 'TabB'"/>
+    <TabC v-if="activeTab === 'TabC'"/> -->
+
+
+    <!-- End multiple dynamic component secrtion -->
   </div>
   <mainFooter :name="name"></mainFooter>
 </template>
@@ -71,6 +87,9 @@ import Form from "./Components/layout/form.vue";
 import Child1 from "./Components/layout/child1.vue";
 import Popup from "./Components/layout/Popup.vue";
 import Card from "./Components/layout/Card.vue";
+import TabA from "./Components/layout/TabA.vue";
+import TabB from "./Components/layout/TabB.vue";
+import TabC from "./Components/layout/TabC.vue";
 export default {
   data() {
     return {
@@ -85,6 +104,7 @@ export default {
       zunaidInfo: 'Hi, This is Zunaid Miah. He is a Software Engineer and having 3 Years+ experience to work on this field. Curenntly He is doing a full time job on a Company.',
       tithyInfo: 'Hi, This is Samima Akter Tithy. She is a Software Engineer and having 1 Years+ experience to work on this field. Curenntly She is learning and make her expert onn that field.',
       tithyLink: 'https://www.facebook.com/samimaaktertithy789',
+      activeTab: 'TabA'
     };
   },
 
@@ -113,6 +133,9 @@ export default {
     Child1,
     Popup,
     Card,
+    TabA,
+    TabB,
+    TabC
   },
 
   provide() {

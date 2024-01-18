@@ -1,6 +1,6 @@
 <template lang="">
-    <div>
-        
+    <div class="p-4">
+        Tab B content
     </div>
 </template>
 <script>
