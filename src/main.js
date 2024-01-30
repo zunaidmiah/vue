@@ -3,7 +3,8 @@ import { createApp } from 'vue'
 // import App from './App1.vue'
 // import App from './AppHttp.vue'
 // import App from './AppMixins.vue'
-import App from './computed.vue'
+// import App from './computed.vue'
+import App from './watch.vue'
 
 import './assets/main.css'
 
