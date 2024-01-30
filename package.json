@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^1.6.5",
+    "loadash": "^1.0.0",
     "vue": "^3.2.45",
     "vue-resource": "^1.5.3"
   },
